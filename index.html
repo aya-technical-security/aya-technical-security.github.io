@@ -2,27 +2,568 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Engineer Aya</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineer Aya | インフラ・セキュリティ・トラブル対応</title>
+  <meta name="description" content="インフラ・セキュリティ・トラブル対応を行う Engineer Aya のポートフォリオサイトです。構築実績、スキル、対応内容を掲載しています。">
+
+  <meta property="og:title" content="Engineer Aya">
+  <meta property="og:description" content="インフラ・セキュリティ・トラブル対応">
+  <meta property="og:image" content="https://engineer-aya.com/ogp.png">
+  <meta property="og:url" content="https://engineer-aya.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Engineer Aya">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Engineer Aya">
+  <meta name="twitter:description" content="インフラ・セキュリティ・トラブル対応">
+  <meta name="twitter:image" content="https://engineer-aya.com/ogp.png">
+
   <style>
+    :root {
+      --bg: #070b12;
+      --bg-soft: #0d1420;
+      --card: rgba(18, 27, 40, 0.88);
+      --line: rgba(70, 120, 180, 0.28);
+      --text: #e8eef7;
+      --muted: #9ca9bb;
+      --accent: #1fb6ff;
+      --accent-soft: rgba(31, 182, 255, 0.16);
+      --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+      --max: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background: #0a0a0a;
-      color: #e0e0e0;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 100px;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(31, 182, 255, 0.14), transparent 30%),
+        radial-gradient(circle at top left, rgba(31, 182, 255, 0.08), transparent 25%),
+        linear-gradient(180deg, #05070c 0%, #0a111b 100%);
+      line-height: 1.7;
     }
-    h1 {
-      font-size: 48px;
-      color: #00bfff;
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
-    p {
-      font-size: 20px;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(7, 11, 18, 0.72);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .site-header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 72px 0 48px;
+    }
+
+    .hero__grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2.2rem, 5vw, 4.4rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    .hero h1 .accent {
+      color: var(--accent);
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.06rem;
+      max-width: 680px;
+    }
+
+    .hero__actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn--primary {
+      background: var(--accent);
+      color: #051019;
+    }
+
+    .btn--secondary {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--line);
+    }
+
+    .hero__photo {
+      position: relative;
+    }
+
+    .hero__photo::before {
+      content: "";
+      position: absolute;
+      inset: -14px;
+      background: radial-gradient(circle, rgba(31, 182, 255, 0.22), transparent 65%);
+      filter: blur(18px);
+      z-index: 0;
+    }
+
+    .photo-card {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 4 / 5;
+    }
+
+    .photo-badge {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      z-index: 2;
+      padding: 10px 14px;
+      border-radius: 14px;
+      background: rgba(6, 10, 18, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+    }
+
+    .photo-badge strong {
+      display: block;
+      font-size: 0.95rem;
+    }
+
+    .photo-badge span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .section {
+      padding: 28px 0 56px;
+    }
+
+    .section-title {
+      margin: 0 0 18px;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      letter-spacing: -0.02em;
+    }
+
+    .section-lead {
+      margin: 0 0 24px;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.06rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+
+    .works {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .work h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .work p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+
+    .work ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      color: var(--muted);
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .contact-note {
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .site-footer {
+      padding: 24px 0 40px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 960px) {
+      .hero__grid,
+      .cards,
+      .skills,
+      .works,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 56px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .site-header__inner {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 12px 0;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero__actions {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Engineer Aya</h1>
-  <p>インフラ / セキュリティ / トラブル対応</p>
-  <p>現在ポートフォリオ構築中</p>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top">Engineer <span>Aya</span></a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#works">Works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <div class="eyebrow">Infrastructure / Security / Trouble Support</div>
+          <h1>技術で支え、<span class="accent">確実に整える。</span></h1>
+          <p>
+            Engineer Aya は、インフラ・セキュリティ・トラブル対応を軸に、
+            構築から運用、切り分けまでを丁寧に支えるポートフォリオサイトです。
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#works">実績を見る</a>
+            <a class="btn btn--secondary" href="#contact">問い合わせへ</a>
+          </div>
+        </div>
+
+        <div class="hero__photo">
+          <div class="photo-card">
+            <img src="profile.jpg" alt="Engineer Aya の紹介写真">
+            <div class="photo-badge">
+              <strong>Engineer Aya</strong>
+              <span>Infra / Security / Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <p class="section-lead">
+          小規模環境から実務寄りの学習ラボまで、構成を理解しながら整えることを重視しています。
+          単に「動かす」だけでなく、なぜその設定になるのかを言語化し、再現できる形に落とし込むのが強みです。
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>インフラ構築</h3>
+            <p>
+              仮想環境、サーバー、ネットワークの基礎構成を組み立て、
+              動作確認まで含めて段階的に整備します。
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>セキュリティ意識</h3>
+            <p>
+              HTTPS、DNS、証明書、権限、公開範囲など、
+              “見えにくいけれど重要な部分”を丁寧に扱います。
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>トラブル対応</h3>
+            <p>
+              問題が起きた時に、現象・原因候補・確認手順を切り分けて、
+              再発防止まで見据えて考えます。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-lead">
+          現在学習・構築・検証しながら扱っている主な領域です。
+        </p>
+
+        <div class="skills">
+          <article class="card">
+            <h3>Infrastructure</h3>
+            <div class="skill-list">
+              <span class="chip">Linux</span>
+              <span class="chip">Windows Server</span>
+              <span class="chip">ESXi</span>
+              <span class="chip">DNS</span>
+              <span class="chip">DHCP</span>
+              <span class="chip">Active Directory</span>
+              <span class="chip">WSUS</span>
+              <span class="chip">Zabbix</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Development / Web</h3>
+            <div class="skill-list">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">GitHub Pages</span>
+              <span class="chip">Git / GitHub</span>
+              <span class="chip">Python</span>
+              <span class="chip">Django</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="works" class="section">
+      <div class="container">
+        <h2 class="section-title">Works</h2>
+        <p class="section-lead">
+          学習・検証を兼ねた実装例です。小さくても、構成を理解したうえで積み上げています。
+        </p>
+
+        <div class="works">
+          <article class="card work">
+            <h3>GitHub Pages + 独自ドメイン接続</h3>
+            <p>
+              GitHub Pages 上にポートフォリオを公開し、独自ドメイン
+              <strong>engineer-aya.com</strong> を接続。
+            </p>
+            <ul>
+              <li>DNS Aレコード設定</li>
+              <li>GitHub Pages Custom Domain 設定</li>
+              <li>TLS / HTTPS有効化確認</li>
+            </ul>
+          </article>
+
+          <article class="card work">
+            <h3>仮想環境・監視環境の構築学習</h3>
+            <p>
+              ESXi、Linux、Windows Server を用いた構成検証と、
+              監視・サーバー運用の基礎学習を継続中。
+            </p>
+            <ul>
+              <li>Windows Server / Active Directory</li>
+              <li>DNS / DHCP / WSUS の理解</li>
+              <li>Zabbix による監視構成の検証</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact">
+          <article class="card">
+            <h3>お問い合わせ</h3>
+            <p>
+              現在ポートフォリオ整備中です。今後、問い合わせ導線やSNS導線を順次追加予定です。
+            </p>
+            <p class="contact-note">
+              連絡先の公開方法は、運用方針に合わせて今後調整します。
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>運用メモ</h3>
+            <p>
+              このサイトは GitHub Pages と独自ドメイン接続で運用しています。
+              構成自体も、ポートフォリオの一部として扱っています。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © 2026 Engineer Aya. All Rights Reserved.
+    </div>
+  </footer>
 </body>
 </html>
