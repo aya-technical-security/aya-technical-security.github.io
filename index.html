@@ -324,18 +324,35 @@
       font-size: 0.96rem;
     }
 
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 14px;
-    }
+.skill-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.skill-card h3 {
+  margin-bottom: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags span {
+  background: rgba(255,255,255,0.08);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
 
     .chip {
       padding: 8px 12px;
@@ -520,13 +537,14 @@
          <br>障害発生時にはログ解析・原因切り分けを行い、迅速な一次復旧と再発防止策の実施まで対応します。
         </p>
 
-        <div class="skills">
-          <article class="card">
-            <h3>インフラ基盤</h3>
-            <div class="skill-list">
+<div class="skills-grid">
+
+  <div class="skill-card">
+    <h3>インフラ基盤</h3>
+    <div class="tags">
       <span>Linux</span>
       <span>RHEL 9</span>
-      <span>Ubuntu  Server</span>
+      <span>Ubuntu Server</span>
       <span>AlmaLinux 9</span>
       <span>Windows Server（2019 / 2022）</span>
       <span>VMware ESXi</span>
@@ -534,10 +552,9 @@
     </div>
   </div>
 
-
-          <article class="card">
-            <h3>ネットワーク / ディレクトリ</h3>
-            <div class="skill-list">
+  <div class="skill-card">
+    <h3>ネットワーク / ディレクトリ</h3>
+    <div class="tags">
       <span>DNS</span>
       <span>DHCP</span>
       <span>Active Directory</span>
@@ -547,9 +564,9 @@
     </div>
   </div>
 
-              <article class="card">
-            <h3>監視</h3>
-            <div class="skill-list">
+  <div class="skill-card">
+    <h3>監視 / 運用 / セキュリティ</h3>
+    <div class="tags">
       <span>Zabbix</span>
       <span>Syslog</span>
       <span>Rsyslog</span>
@@ -560,9 +577,9 @@
     </div>
   </div>
 
-              <article class="card">
-            <h3>Web / 開発</h3>
-            <div class="skill-list">
+  <div class="skill-card">
+    <h3>Web / 開発</h3>
+    <div class="tags">
       <span>HTML</span>
       <span>CSS</span>
       <span>JavaScript</span>
@@ -574,6 +591,8 @@
       <span>GitHub</span>
     </div>
   </div>
+
+</div>
 
     <section id="works" class="section">
       <div class="container">
