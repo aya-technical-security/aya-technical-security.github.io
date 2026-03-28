@@ -256,6 +256,49 @@
       max-width: 760px;
     }
 
+    .about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.about-card {
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  min-height: 100%;
+}
+
+.about-card h3 {
+  margin: 0 0 14px;
+  font-size: 1.08rem;
+  color: var(--text);
+}
+
+.about-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.about-list li + li {
+  margin-top: 10px;
+}
+
+.about-text {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (max-width: 960px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -434,7 +477,7 @@
     </p>
 
     <div class="about-grid">
-      <article class="card">
+      <article class="about-card">
         <h3>対応可能業務</h3>
         <ul class="about-list">
           <li>サーバー構築（Windows / Linux / ESXi）</li>
@@ -445,7 +488,7 @@
         </ul>
       </article>
 
-      <article class="card">
+      <article class="about-card">
         <h3>強み</h3>
         <ul class="about-list">
           <li>Windows・Linux混在環境の理解</li>
@@ -456,7 +499,7 @@
         </ul>
       </article>
 
-      <article class="card">
+      <article class="about-card">
         <h3>対応スタンス</h3>
         <p class="about-text">
           ただ動かすだけではなく、安定して運用し続けられる構成を重視しています。
@@ -466,6 +509,8 @@
       </article>
     </div>
   </div>
+</section>
+  
 </section>
     <section id="skills" class="section">
       <div class="container">
