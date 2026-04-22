@@ -111,24 +111,15 @@
   display:grid;
   align-items:center;
   padding:calc(var(--hero-pad) - 16px) 0 var(--hero-pad);
-  background-image:
-    linear-gradient(90deg, rgba(8,8,12,.62) 0%, rgba(8,8,12,.38) 42%, rgba(8,8,12,.28) 100%),
-    var(--hero-bg);
+  background-image:url('backimage.png');
   background-size:cover;
-  background-position:58% center;
+  background-position:center;
   overflow:hidden;
 }
 
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(circle at 18% 22%, rgba(198,168,106,.05), transparent 18%),
-        radial-gradient(circle at 78% 80%, rgba(198,168,106,.03), transparent 22%);
-      pointer-events:none;
-      animation: drift 9s ease-in-out infinite alternate;
-    }
+.hero::before{
+  display:none;
+}
 
     .hero-grid{
       position:relative;
