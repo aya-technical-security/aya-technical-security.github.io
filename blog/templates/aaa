@@ -1,1 +1,13 @@
-
+<article class="post-card">
+  <a class="post-link" href="/blog/posts/2026-04-26-sample.html">
+    <div class="post-meta">
+      <time datetime="2026-04-26">2026.04.26</time>
+      <span class="post-tag">カテゴリ名</span>
+    </div>
+    <h3>記事タイトル</h3>
+    <p>
+      2〜3行程度の要約
+    </p>
+    <span class="read-more">記事を読む</span>
+  </a>
+</article>
