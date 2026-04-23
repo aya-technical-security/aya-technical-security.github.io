@@ -27,13 +27,22 @@
     </div>
   </header>
 
+  <button id="musicToggle" class="music-toggle" type="button" aria-pressed="false">
+    ♫ Music
+  </button>
+
+  <audio id="bgm" loop preload="none">
+    <source src="/blog/assets/audio/theme.mp3" type="audio/mpeg">
+  </audio>
+
   <main>
     <section class="blog-hero">
       <div class="container hero-inner">
         <p class="eyebrow">Aya Journal</p>
-        <h1 class="hero-title">いっぱいの思い出<br>積み重ねてきた記録</h1>
+        <h1 class="hero-title">技術と感性を、<br>静かに積み重ねる記録。</h1>
         <p class="hero-lead">
-          インフラ、Web制作、運用改善、日々感じたことなど、思いのままに綴っていきます。
+          インフラ、Web制作、運用改善、問い合わせ導線、夜の現場で見えてきたこと。
+          実務で役に立つ視点を、落ち着いた言葉で整理していきます。
         </p>
 
         <div class="category-row">
@@ -51,6 +60,10 @@
         <div class="section-head">
           <div>
             <h2 class="section-title">新着記事</h2>
+            <p class="section-copy">
+              カードを追加してもレイアウトが崩れにくい可変グリッド構成です。
+              記事を増やすときは、下のカード1枚をそのまま複製してください。
+            </p>
           </div>
         </div>
 
@@ -78,7 +91,7 @@
               </div>
               <h3>静的サイトでも問い合わせ導線は整えられる</h3>
               <p>
-                GitHub Pages のような静的構成でも、見た目と導線を壊さず問い合わせを受ける方法をまとめる予定。
+                GitHub Pagesのような静的構成でも、見た目と導線を壊さず問い合わせを受ける方法をまとめる予定。
               </p>
               <span class="read-more">記事を読む</span>
             </a>
@@ -97,71 +110,26 @@
               <span class="read-more">記事を読む</span>
             </a>
           </article>
-        </div>
-        </div>
 
+          <!-- ▼ ここから複製して追加 ▼ -->
+          <article class="post-card">
+            <a class="post-link" href="/blog/posts/2026-04-26-sample.html">
+              <div class="post-meta">
+                <time datetime="2026-04-26">2026.04.26</time>
+                <span class="post-tag">カテゴリ名</span>
+              </div>
+              <h3>ここに記事タイトル</h3>
+              <p>
+                ここに2〜3行程度の要約を書きます。長くなってもカードの高さが暴れにくいように整えています。
+              </p>
+              <span class="read-more">記事を読む</span>
+            </a>
+          </article>
+          <!-- ▲ ここまで複製して追加 ▲ -->
         </div>
       </div>
     </section>
   </main>
-<article class="post-card">
-  <a class="post-link" href="/blog/posts/2026-04-26-sample.html">
-    <div class="post-meta">
-      <time datetime="2026-04-26">2026.04.26</time>
-      <span class="post-tag">カテゴリ名</span>
-    </div>
-    <h3>ここに記事タイトル</h3>
-    <p>
-      ここに2〜3行程度の要約を書きます。
-    </p>
-    <span class="read-more">記事を読む</span>
-  </a>
-
-    <article class="post-card">
-  <a class="post-link" href="/blog/posts/2026-04-26-sample.html">
-    <div class="post-meta">
-      <time datetime="2026-04-26">2026.04.26</time>
-      <span class="post-tag">カテゴリ名</span>
-    </div>
-    <h3>ここに記事タイトル</h3>
-    <p>
-      ここに2〜3行程度の要約を書きます。
-    </p>
-    <span class="read-more">記事を読む</span>
-  </a>
-</article>
-
-
-  <article class="post-card">
-  <a class="post-link" href="/blog/posts/2026-04-26-sample.html">
-    <div class="post-meta">
-      <time datetime="2026-04-26">2026.04.26</time>
-      <span class="post-tag">カテゴリ名</span>
-    </div>
-    <h3>ここに記事タイトル</h3>
-    <p>
-      ここに2〜3行程度の要約を書きます。
-    </p>
-    <span class="read-more">記事を読む</span>
-  </a>
-</article>
-
-
-  <article class="post-card">
-  <a class="post-link" href="/blog/posts/2026-04-26-sample.html">
-    <div class="post-meta">
-      <time datetime="2026-04-26">2026.04.26</time>
-      <span class="post-tag">カテゴリ名</span>
-    </div>
-    <h3>ここに記事タイトル</h3>
-    <p>
-      ここに2〜3行程度の要約を書きます。
-    </p>
-    <span class="read-more">記事を読む</span>
-  </a>
-</article>
-  
-</article>
 
   <footer class="site-footer">
     <div class="container footer-inner">
