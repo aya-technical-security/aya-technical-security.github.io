@@ -82,8 +82,10 @@
                 </div>
               </div>
               <div class="letter-body">
-                <h3>静的サイトでも問い合わせ導線は整えられる</h3>
-                <p>GitHub Pagesのような静的構成でも、見た目と導線を壊さず問い合わせを受ける方法をまとめる予定。</p>
+                <h3>更新したのに反映されない。GitHub Pagesで学んだ【待つ技術】</h3>
+                <p>ブログの文章を書き換えてコミットしたのに、公開サイトには古い内容が残ったまま。
+              <br>壊れたのかと思ってActionsを確認すると、
+                  <br>原因はコードではなく公開処理の渋滞だった。</p>
               </div>
               <div class="letter-footer"><span class="read-more">全文を読む</span></div>
             </button>
@@ -184,26 +186,54 @@
     </div>
   </div>
 
-  <div class="modal" id="post2" aria-hidden="true" role="dialog" aria-labelledby="post2-title">
-    <div class="modal-backdrop" data-close="true"></div>
-    <div class="modal-window" role="document">
-      <button class="modal-close" type="button" aria-label="閉じる">×</button>
+<div class="modal" id="post4" aria-hidden="true">
+  <div class="modal-overlay close-modal"></div>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="post4-title">
+    <button class="modal-close close-modal" type="button">×</button>
+    <div class="modal-scroll">
       <div class="modal-meta">
         <time datetime="2026-04-24">2026.04.24</time>
-        <span class="post-tag">フォーム</span>
+        <span class="post-tag">GitHub Pages</span>
       </div>
-      <h2 id="post2-title">静的サイトでも問い合わせ導線は整えられる</h2>
-      <div class="modal-content">
-        <p>静的サイトは軽く、管理がしやすい。一方で、問い合わせフォームや予約導線が弱いと思われがちだ。けれど実際には、外部サービスを適切に使えば十分に実務的な導線を作れる。</p>
-        <h3>導線は「数」より「位置」</h3>
-        <p>ボタンを増やせば問い合わせが増えるわけではない。大切なのは、相手が迷わず行動できる位置に必要な導線を置くことだ。</p>
-        <h3>見た目を壊さない実装が重要</h3>
-        <p>技術的にフォームが動いても、デザインから浮いていればブランド体験は損なわれる。静的サイトほど、見た目と機能の統一感が重要になる。</p>
-        <h3>まとめ</h3>
-        <p>静的サイトでも問い合わせ導線は十分に整えられる。大切なのは、仕組みよりも、相手にとって自然に見える形で配置することだ。</p>
-      </div>
+      <h2 id="post4-title">
+        更新したのに反映されない。GitHub Pagesで学んだ【待つ技術】
+      </h2>
+      <p>
+        ブログを育て始めて最初にぶつかった壁は、デザインでも文章でもなく、
+        「更新したのにサイトに反映されない」という現象だった。
+      </p>
+      <p>
+        index.html を書き換え、丁寧にコミットし、公開サイトを見る。
+        それでも画面は前のまま。最初はキャッシュか、HTMLのミスか、
+        何か壊してしまったのかと思った。
+      </p>
+      <p>
+        しかし GitHub Actions のログを見ると、原因はもっと単純だった。
+        Pages build and deployment が進行中で、次の公開依頼が順番待ちになっていた。
+      </p>
+      <p>
+        つまり、サイトが壊れたわけではなく、
+        GitHub側で「今ひとつ前の更新を公開している最中」だっただけだ。
+      </p>
+      <p>
+        Web制作では、作る技術と同じくらい、
+        仕組みを理解して落ち着いて待つ姿勢も大切だと実感した。
+      </p>
+      <p>
+        今回学んだことは三つある。
+      </p>
+      <p>
+        ・コミットを連打しない<br>
+        ・Actionsログを見る癖をつける<br>
+        ・反映には少し時間がかかることを知る
+      </p>
+      <p>
+        見た目が静かなサイトでも、裏では多くの処理が動いている。
+        表面だけで判断せず、仕組みまで理解して整える人でありたい。
+      </p>
     </div>
   </div>
+</div>
 
   <div class="modal" id="post3" aria-hidden="true" role="dialog" aria-labelledby="post3-title">
     <div class="modal-backdrop" data-close="true"></div>
