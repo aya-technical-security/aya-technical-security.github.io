@@ -73,12 +73,13 @@
             </button>
           </article>
 
-          <article class="letter-card" data-modal="post2">
-            <button class="letter-link open-modal" type="button" aria-controls="post2">
+        <div class="post-grid">
+          <article class="letter-card featured" data-modal="post1">
+            <button class="letter-link open-modal" type="button" aria-controls="post1">
               <div class="letter-top">
                 <div class="post-meta">
-                  <time datetime="2026-04-24">2026.04.24</time>
-                  <span class="post-tag">フォーム</span>
+                  <time datetime="2026-04-23">2026.04.23</time>
+                  <span class="post-tag">Web制作</span>
                 </div>
               </div>
               <div class="letter-body">
@@ -186,18 +187,20 @@
     </div>
   </div>
 
-<div class="modal" id="post4" aria-hidden="true">
-  <div class="modal-overlay close-modal"></div>
-  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="post4-title">
-    <button class="modal-close close-modal" type="button">×</button>
-    <div class="modal-scroll">
+
+  
+  <div class="modal" id="post1" aria-hidden="true" role="dialog" aria-labelledby="post1-title">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-window" role="document">
+      <button class="modal-close" type="button" aria-label="閉じる">×</button>
       <div class="modal-meta">
-        <time datetime="2026-04-24">2026.04.24</time>
-        <span class="post-tag">GitHub Pages</span>
+        <time datetime="2026-04-23">2026.04.23</time>
+        <span class="post-tag">Web制作</span>
       </div>
       <h2 id="post4-title">
-        更新したのに反映されない。GitHub Pagesで学んだ【待つ技術】
+        更新したのに反映されない。GitHub Pagesで学んだ“待つ技術”
       </h2>
+
       <p>
         ブログを育て始めて最初にぶつかった壁は、デザインでも文章でもなく、
         「更新したのにサイトに反映されない」という現象だった。
