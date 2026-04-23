@@ -1,62 +1,145 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Engineer Aya Blog</title>
-<style>
-body{
-  margin:0;
-  background:#0f1115;
-  color:#f3efe3;
-  font-family: "Yu Gothic", sans-serif;
-}
-.wrap{
-  max-width:1000px;
-  margin:auto;
-  padding:60px 24px;
-}
-h1{
-  font-size:48px;
-  margin-bottom:10px;
-}
-p{
-  color:#b9b2a0;
-}
-.card{
-  margin-top:30px;
-  padding:24px;
-  border:1px solid rgba(212,175,55,.25);
-  border-radius:18px;
-  background:rgba(255,255,255,.03);
-}
-a{
-  color:#d4af37;
-  text-decoration:none;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Engineer Aya</title>
+  <meta name="description" content="Engineer Ayaのブログ。Web制作・インフラ・運用改善・集客導線の記録。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/assets/css/style.css" />
 </head>
 <body>
-<div class="wrap">
-<h1>Tech Blog</h1>
-<p>インフラ・Web制作・運用改善・営業ノウハウ</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand">
+        <strong>Engineer Aya</strong>
+        <span>Blog / Notes / Journal</span>
+      </a>
 
-<div class="card">
-<h2>最初の記事</h2>
-<p>小規模店舗サイトはなぜ高額制作会社に頼まなくていいのか</p>
-<a href="#">続きを読む</a>
-</div>
+      <nav class="nav" aria-label="ブログナビゲーション">
+        <a href="/">Top</a>
+        <a href="/portfolio/">Portfolio</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="card">
-<h2>第二の記事</h2>
-<p>SSL設定とお問い合わせフォームの基本</p>
-<a href="#">続きを読む</a>
-</div>
+  <main>
+    <section class="blog-hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Aya Journal</p>
+        <h1 class="hero-title">技術と感性を、<br>静かに積み重ねる記録。</h1>
+        <p class="hero-lead">
+          インフラ、Web制作、運用改善、問い合わせ導線、夜の現場で見えてきたこと。
+          実務で役に立つ視点を、落ち着いた言葉で整理していきます。
+        </p>
 
-<p style="margin-top:50px;">
-<a href="/">← TOPへ戻る</a>
-</p>
+        <div class="category-row">
+          <span class="chip">Web制作</span>
+          <span class="chip">LP / 導線設計</span>
+          <span class="chip">Linux / Windows</span>
+          <span class="chip">運用改善</span>
+          <span class="chip">雑記</span>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <section class="blog-index">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">新着記事</h2>
+            <p class="section-copy">
+              カードを追加してもレイアウトが崩れにくい、可変グリッド構成にしています。
+            </p>
+          </div>
+        </div>
+
+        <div class="post-grid">
+          <article class="post-card featured">
+            <a class="post-link" href="/blog/posts/2026-04-23-first-post.html">
+              <div class="post-meta">
+                <time datetime="2026-04-23">2026.04.23</time>
+                <span class="post-tag">Web制作</span>
+              </div>
+              <h3>夜の店舗に合うLPは、なぜ“静かな高級感”が必要なのか</h3>
+              <p>
+                バーやラウンジ、接客業向けのページで世界観を壊さず予約導線を作る時に、
+                何を優先すべきかを整理したメモ。
+              </p>
+              <span class="read-more">記事を読む</span>
+            </a>
+          </article>
+
+          <article class="post-card">
+            <a class="post-link" href="/blog/posts/2026-04-24-contact-form-note.html">
+              <div class="post-meta">
+                <time datetime="2026-04-24">2026.04.24</time>
+                <span class="post-tag">フォーム</span>
+              </div>
+              <h3>静的サイトでも問い合わせ導線は整えられる</h3>
+              <p>
+                GitHub Pages のような静的構成でも、見た目と導線を壊さず問い合わせを受ける方法をまとめる予定。
+              </p>
+              <span class="read-more">記事を読む</span>
+            </a>
+          </article>
+
+          <article class="post-card">
+            <a class="post-link" href="/blog/posts/2026-04-25-infra-note.html">
+              <div class="post-meta">
+                <time datetime="2026-04-25">2026.04.25</time>
+                <span class="post-tag">インフラ</span>
+              </div>
+              <h3>運用現場で“見やすさ”が技術と同じくらい重要な理由</h3>
+              <p>
+                設定が正しいだけでは足りず、引き継ぎや保守まで見据えて整える必要があるという話の下書き。
+              </p>
+              <span class="read-more">記事を読む</span>
+            </a>
+          </article>
+        </div>
+
+        <div class="section-head second-head">
+          <div>
+            <h2 class="section-title">追加しやすい雛形</h2>
+            <p class="section-copy">
+              下のカードをそのまま複製して、リンク・日付・タグ・本文だけ変えれば増やせます。
+            </p>
+          </div>
+        </div>
+
+        <div class="post-grid">
+          <!-- ここから複製 -->
+          <article class="post-card">
+            <a class="post-link" href="/blog/posts/2026-04-26-sample.html">
+              <div class="post-meta">
+                <time datetime="2026-04-26">2026.04.26</time>
+                <span class="post-tag">カテゴリ名</span>
+              </div>
+              <h3>ここに記事タイトル</h3>
+              <p>
+                ここに2〜3行程度の要約を書きます。長すぎてもカードの高さが暴れにくいよう調整しています。
+              </p>
+              <span class="read-more">記事を読む</span>
+            </a>
+          </article>
+          <!-- ここまで複製 -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Engineer Aya</p>
+      <a href="/">Topへ戻る</a>
+    </div>
+  </footer>
+
+  <script src="/blog/assets/js/script.js" defer></script>
 </body>
 </html>
