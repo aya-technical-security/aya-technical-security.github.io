@@ -15,8 +15,8 @@
     <div class="container header-inner">
       <a href="/" class="brand">
         <strong>Engineer Aya</strong>
+        <span>Blog / Notes / Journal</span>
       </a>
-
       <nav class="nav" aria-label="ブログナビゲーション">
         <a href="/">Top</a>
         <a href="/portfolio/">Portfolio</a>
@@ -26,12 +26,9 @@
     </div>
   </header>
 
-  <button id="musicToggle" class="music-toggle" type="button" aria-pressed="false">
-    ♫ Music
-  </button>
-
+  <button id="musicToggle" class="music-toggle" type="button" aria-pressed="false">♫ Music</button>
   <audio id="bgm" loop preload="none">
-    <source src="/blog/assets/music/Healing_Garden.m4a" type="audio/mpeg">
+    <source src="/blog/assets/music/Healing_Garden.m4a" type="audio/mp4">
   </audio>
 
   <main>
@@ -40,9 +37,8 @@
         <p class="eyebrow">Aya Journal</p>
         <h1 class="hero-title">いっぱいの思い出<br>積み重ねてきた記録</h1>
         <p class="hero-lead">
-          インフラ、Web制作、運用改善、日々感じたことなど、思いのままに綴っていきます
+          インフラ、Web制作、運用改善、日々感じたことなど、思いのままに綴っていきます。
         </p>
-
         <div class="category-row">
           <span class="chip">Web制作</span>
           <span class="chip">LP / 導線設計</span>
@@ -58,65 +54,130 @@
         <div class="section-head">
           <div>
             <h2 class="section-title">新着記事</h2>
+            <p class="section-copy">
+              概要カードをクリックすると、和風の閲覧ウィンドウが開いて全文を読める構成です。
+              カードは同じブロックを複製して増やせるので、レイアウトが崩れにくくなっています。
+            </p>
           </div>
         </div>
 
-          <!-- ▼ ここから複製して追加 ▼ -->
-
-
-
-        
-          <!-- ▲ ここまで複製して追加 ▲ -->
-
         <div class="post-grid">
-          <article class="post-card featured">
-            <a class="post-link" href="/blog/posts/2026-04-23-first-post.html">
-              <div class="post-meta">
-                <time datetime="2026-04-23">2026.04.23</time>
-                <span class="post-tag">Web制作</span>
+          <article class="letter-card featured" data-modal="post1">
+            <button class="letter-link open-modal" type="button" aria-controls="post1">
+              <div class="letter-top">
+                <div class="post-meta">
+                  <time datetime="2026-04-23">2026.04.23</time>
+                  <span class="post-tag">Web制作</span>
+                </div>
               </div>
-              <h3>夜の店舗に合うLPは、なぜ“静かな高級感”が必要なのか</h3>
-              <p>
-                バーやラウンジ、接客業向けのページで世界観を壊さず予約導線を作る時に、
-                何を優先すべきかを整理したメモ。
-              </p>
-              <span class="read-more">記事を読む</span>
-            </a>
+              <div class="letter-body">
+                <h3>夜の店舗に合うLPは、なぜ“静かな高級感”が必要なのか</h3>
+                <p>バーやラウンジ、接客業向けのページで世界観を壊さず予約導線を作る時に、何を優先すべきかを整理したメモ。</p>
+              </div>
+              <div class="letter-footer"><span class="read-more">全文を読む</span></div>
+            </button>
           </article>
 
-          <article class="post-card">
-            <a class="post-link" href="/blog/posts/2026-04-24-contact-form-note.html">
-              <div class="post-meta">
-                <time datetime="2026-04-24">2026.04.24</time>
-                <span class="post-tag">フォーム</span>
+          <article class="letter-card" data-modal="post2">
+            <button class="letter-link open-modal" type="button" aria-controls="post2">
+              <div class="letter-top">
+                <div class="post-meta">
+                  <time datetime="2026-04-24">2026.04.24</time>
+                  <span class="post-tag">フォーム</span>
+                </div>
               </div>
-              <h3>静的サイトでも問い合わせ導線は整えられる</h3>
-              <p>
-                GitHub Pagesのような静的構成でも、見た目と導線を壊さず問い合わせを受ける方法をまとめる予定。
-              </p>
-              <span class="read-more">記事を読む</span>
-            </a>
+              <div class="letter-body">
+                <h3>静的サイトでも問い合わせ導線は整えられる</h3>
+                <p>GitHub Pagesのような静的構成でも、見た目と導線を壊さず問い合わせを受ける方法をまとめる予定。</p>
+              </div>
+              <div class="letter-footer"><span class="read-more">全文を読む</span></div>
+            </button>
           </article>
 
-          <article class="post-card">
-            <a class="post-link" href="/blog/posts/2026-04-25-infra-note.html">
-              <div class="post-meta">
-                <time datetime="2026-04-25">2026.04.25</time>
-                <span class="post-tag">インフラ</span>
+          <article class="letter-card" data-modal="post3">
+            <button class="letter-link open-modal" type="button" aria-controls="post3">
+              <div class="letter-top">
+                <div class="post-meta">
+                  <time datetime="2026-04-25">2026.04.25</time>
+                  <span class="post-tag">インフラ</span>
+                </div>
               </div>
-              <h3>運用現場で“見やすさ”が技術と同じくらい重要な理由</h3>
-              <p>
-                設定が正しいだけでは足りず、引き継ぎや保守まで見据えて整える必要があるという話の下書き。
-              </p>
-              <span class="read-more">記事を読む</span>
-            </a>
+              <div class="letter-body">
+                <h3>運用現場で“見やすさ”が技術と同じくらい重要な理由</h3>
+                <p>設定が正しいだけでは足りず、引き継ぎや保守まで見据えて整える必要があるという話の下書き。</p>
+              </div>
+              <div class="letter-footer"><span class="read-more">全文を読む</span></div>
+            </button>
           </article>
-
-
         </div>
       </div>
     </section>
   </main>
+
+  <div class="modal" id="post1" aria-hidden="true" role="dialog" aria-labelledby="post1-title">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-window" role="document">
+      <button class="modal-close" type="button" aria-label="閉じる">×</button>
+      <div class="modal-meta">
+        <time datetime="2026-04-23">2026.04.23</time>
+        <span class="post-tag">Web制作</span>
+      </div>
+      <h2 id="post1-title">夜の店舗に合うLPは、なぜ“静かな高級感”が必要なのか</h2>
+      <div class="modal-content">
+        <p>バー、ラウンジ、夜の接客業。こうした業種のページは、派手に作れば良いわけではない。むしろ、余白や落ち着き、信頼感のある空気が必要になる。</p>
+        <h3>派手さは、必ずしも高級感にならない</h3>
+        <p>ネオンを強くしたり、情報を詰め込みすぎたり、動きを増やしすぎたりすると、かえって安っぽく見えることがある。特に夜の店舗は「価格」ではなく「空気感」で選ばれる場面が多い。</p>
+        <p>そのため、色数を絞り、文字組みを整え、強い演出を必要最低限に抑えることが、結果として予約につながることが多い。</p>
+        <h3>余白は“高級感”そのもの</h3>
+        <p>余白は何もない空間ではなく、「慌ただしさがない」という印象を作る装置だと思っている。画面の中に静けさがあると、見る側は安心する。</p>
+        <p>夜の店舗においては、その安心感が信頼や期待値に直結する。だからこそ、余白はデザイン上の贅沢ではなく、実用的な設計要素になる。</p>
+        <h3>まとめ</h3>
+        <p>夜の店舗のLPに必要なのは、派手な演出よりも、整った空気感、静かな高級感、そして明確な導線。「きれい」だけではなく、「この店なら安心して予約できそう」と思ってもらえる構成を作ることが重要だと感じている。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="post2" aria-hidden="true" role="dialog" aria-labelledby="post2-title">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-window" role="document">
+      <button class="modal-close" type="button" aria-label="閉じる">×</button>
+      <div class="modal-meta">
+        <time datetime="2026-04-24">2026.04.24</time>
+        <span class="post-tag">フォーム</span>
+      </div>
+      <h2 id="post2-title">静的サイトでも問い合わせ導線は整えられる</h2>
+      <div class="modal-content">
+        <p>静的サイトは軽く、管理がしやすい。一方で、問い合わせフォームや予約導線が弱いと思われがちだ。けれど実際には、外部サービスを適切に使えば十分に実務的な導線を作れる。</p>
+        <h3>導線は「数」より「位置」</h3>
+        <p>ボタンを増やせば問い合わせが増えるわけではない。大切なのは、相手が迷わず行動できる位置に必要な導線を置くことだ。</p>
+        <h3>見た目を壊さない実装が重要</h3>
+        <p>技術的にフォームが動いても、デザインから浮いていればブランド体験は損なわれる。静的サイトほど、見た目と機能の統一感が重要になる。</p>
+        <h3>まとめ</h3>
+        <p>静的サイトでも問い合わせ導線は十分に整えられる。大切なのは、仕組みよりも、相手にとって自然に見える形で配置することだ。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="post3" aria-hidden="true" role="dialog" aria-labelledby="post3-title">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-window" role="document">
+      <button class="modal-close" type="button" aria-label="閉じる">×</button>
+      <div class="modal-meta">
+        <time datetime="2026-04-25">2026.04.25</time>
+        <span class="post-tag">インフラ</span>
+      </div>
+      <h2 id="post3-title">運用現場で“見やすさ”が技術と同じくらい重要な理由</h2>
+      <div class="modal-content">
+        <p>インフラや運用の現場では、「設定が正しいか」だけが評価基準ではない。誰が見ても把握しやすいこと、次の人が引き継ぎやすいことも、同じくらい重要だ。</p>
+        <h3>正しいだけでは足りない</h3>
+        <p>仕様通りに動く構成であっても、読みづらい設計書や分かりにくい命名は、後の保守や障害対応を難しくする。</p>
+        <h3>見やすさは事故を減らす</h3>
+        <p>運用現場では、焦っている時ほど見やすい情報が必要になる。画面、表、ログ、ドキュメントの整え方は、そのまま事故率にも影響する。</p>
+        <h3>まとめ</h3>
+        <p>技術力とは、ただ動かす力だけではなく、継続して扱いやすく整える力でもある。運用における“見やすさ”は、立派な技術だと思っている。</p>
+      </div>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="container footer-inner">
