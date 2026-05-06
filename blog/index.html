@@ -1,266 +1,212 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | Engineer Aya</title>
-  <meta name="description" content="Engineer Ayaのブログ。Web制作・インフラ・運用改善・集客導線の記録。" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/blog/assets/css/style.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="/" class="brand">
-        <strong>Engineer Aya</strong>
-      </a>
-      <nav class="nav" aria-label="ブログナビゲーション">
-        <a href="/">Top</a>
-        <a href="/portfolio/">Portfolio</a>
-        <a href="/blog/">Blog</a>
-        <a href="/#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <button id="musicToggle" class="music-toggle" type="button" aria-pressed="false">♫ Music</button>
-  <audio id="bgm" loop preload="none">
-    <source src="/blog/assets/music/Healing_Garden.m4a" type="audio/mp4">
-  </audio>
-
-  <main>
-    <section class="blog-hero">
-      <div class="container hero-inner">
-        <p class="eyebrow">Aya Journal</p>
-        <h1 class="hero-title">いっぱいの思い出<br>積み重ねてきた記録</h1>
-        <p class="hero-lead">
-          インフラ、Web制作、運用改善、日々感じたことなど、思いのままに綴っていきます。
-        </p>
-        <div class="category-row">
-          <span class="chip">Web制作</span>
-          <span class="chip">LP / 導線設計</span>
-          <span class="chip">Linux / Windows</span>
-          <span class="chip">運用改善</span>
-          <span class="chip">雑記</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="blog-index">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <h2 class="section-title">明夜の日記</h2>
-          </div>
-        </div>
-
-
-  <article class="letter-card" data-modal="post1">
-  <button class="letter-link open-modal" type="button">
-    <div class="letter-top">
-      <div class="post-meta">
-        <time datetime="2026-04-23">2026.04.23</time>
-        <span class="post-tag">Web制作</span>
-      </div>
-    </div>
-    <div class="letter-body">
-      <h3>WordPressなしで作る、和風お手紙ブログの設計メモ</h3>
-      <p>HTML/CSS/JSだけで、世界観を崩さず“読む体験”を作る方法をまとめました。</p>
-    </div>
-    <div class="letter-footer">
-      <span class="read-more">全文を読む</span>
-    </div>
-  </button>
-</article>
-        
-
-        <div class="post-grid">
-          <article class="letter-card featured" data-modal="post1">
-            <button class="letter-link open-modal" type="button" aria-controls="post1">
-              <div class="letter-top">
-                <div class="post-meta">
-                  <time datetime="2026-04-23">2026.04.23</time>
-                  <span class="post-tag">Web制作</span>
-                </div>
+              <div class="entry-card__footer">
+                <span class="read-more">全文を読む</span>
               </div>
-              <div class="letter-body">
-                <h3>更新したのに反映されない。GitHub Pagesで学んだ【待つ技術】</h3>
-                <p>ブログの文章を書き換えてコミットしたのに、公開サイトには古い内容が残ったまま。
-              <br>壊れたのかと思ってActionsを確認すると、
-                  <br>原因はコードではなく公開処理の渋滞だった。</p>
-              </div>
-              <div class="letter-footer"><span class="read-more">全文を読む</span></div>
             </button>
           </article>
 
-          <article class="letter-card" data-modal="post3">
-            <button class="letter-link open-modal" type="button" aria-controls="post3">
-              <div class="letter-top">
-                <div class="post-meta">
-                  <time datetime="2026-04-25">2026.04.25</time>
-                  <span class="post-tag">インフラ</span>
-                </div>
+          <!-- Card 2 -->
+          <article class="entry-card" data-modal="post2">
+            <button class="entry-card__button open-modal" type="button" aria-controls="post2">
+              <div class="entry-card__meta">
+                <time datetime="2026-04-24">2026.04.24</time>
+                <span class="tag">GitHub Pages</span>
               </div>
-              <div class="letter-body">
+
+              <div class="entry-card__body">
+                <h3>更新したのに反映されない。GitHub Pagesで学んだ“待つ技術”</h3>
+                <p>
+                  ブログの文章を書き換えてコミットしたのに、公開サイトには古い内容が残ったまま。
+                  原因はコードではなく公開処理の渋滞だった。
+                </p>
+              </div>
+
+              <div class="entry-card__footer">
+                <span class="read-more">全文を読む</span>
+              </div>
+            </button>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="entry-card" data-modal="post3">
+            <button class="entry-card__button open-modal" type="button" aria-controls="post3">
+              <div class="entry-card__meta">
+                <time datetime="2026-04-25">2026.04.25</time>
+                <span class="tag">インフラ</span>
+              </div>
+
+              <div class="entry-card__body">
                 <h3>運用現場で“見やすさ”が技術と同じくらい重要な理由</h3>
-                <p>設定が正しいだけでは足りず、引き継ぎや保守まで見据えて整える必要があるという話の下書き。</p>
+                <p>
+                  設定が正しいだけでは足りず、引き継ぎや保守まで見据えて整える必要があるという話の下書き。
+                </p>
               </div>
-              <div class="letter-footer"><span class="read-more">全文を読む</span></div>
+
+              <div class="entry-card__footer">
+                <span class="read-more">全文を読む</span>
+              </div>
             </button>
           </article>
+
+          <!-- 複製用テンプレ
+          <article class="entry-card" data-modal="post4">
+            <button class="entry-card__button open-modal" type="button" aria-controls="post4">
+              <div class="entry-card__meta">
+                <time datetime="2026-04-26">2026.04.26</time>
+                <span class="tag">カテゴリ名</span>
+              </div>
+
+              <div class="entry-card__body">
+                <h3>記事タイトル</h3>
+                <p>要約</p>
+              </div>
+
+              <div class="entry-card__footer">
+                <span class="read-more">全文を読む</span>
+              </div>
+            </button>
+          </article>
+          -->
         </div>
       </div>
     </section>
   </main>
 
-  <div class="modal" id="post1" aria-hidden="true" role="dialog" aria-labelledby="post1-title">
-    <div class="modal-backdrop" data-close="true"></div>
-    <div class="modal-window" role="document">
-      <button class="modal-close" type="button" aria-label="閉じる">×</button>
-      <div class="modal-meta">
-        <time datetime="2026-04-23">2026.04.23</time>
-        <span class="post-tag">Web制作</span>
+  <!-- Modal 1 -->
+  <section class="modal" id="post1" aria-hidden="true" role="dialog" aria-labelledby="post1-title">
+    <div class="modal__backdrop" data-close="true"></div>
+    <div class="modal__window" role="document">
+      <button class="modal__close" type="button" aria-label="閉じる">×</button>
+
+      <div class="modal__meta">
+        <time datetime="2026-04-24">2026.04.24</time>
+        <span class="tag">Web制作</span>
       </div>
-      <h2 id="post1-title">WordPressなしで作る、和風お手紙ブログの設計メモ</h2>
-      <div class="modal-content">
+
+      <h2 id="post1-title" class="modal__title">WordPressなしで作る、和風お手紙ブログの設計メモ</h2>
+
+      <div class="modal__content">
         <p>
-          ブログを作るとき、多くの人はWordPressを選びます。
-          確かに便利ですが、もっと軽く、もっと自由に、
-          世界観まで含めて表現したいと思い、
+          ブログを作るとき、多くの人はWordPressを選びます。確かに便利ですが、
+          もっと軽く、もっと自由に、世界観まで含めて表現したいと思い、
           今回は静的サイトだけでブログを構築しました。
         </p>
+
         <h3>今回使った構成</h3>
-        <p>
-          使用したのは次の3つだけです。
-        </p>
+        <p>使用したのは次の3つだけです。</p>
         <ul>
           <li>HTML（ページ構造）</li>
           <li>CSS（和風・高級感ある見た目）</li>
           <li>JavaScript（モーダル表示・音楽制御）</li>
         </ul>
+
         <p>
           サーバー側のプログラムやデータベースは使っていません。
           GitHub Pagesでそのまま公開できます。
         </p>
+
         <h3>普通のブログとの違い</h3>
         <p>
           一般的なブログは、一覧から記事ページへ移動します。
-          ですが今回は、一覧のカードをクリックすると、
-          その場で和風の閲覧ウィンドウが開く仕様にしました。
+          ですが今回は、一覧のカードをクリックすると、その場で和風の閲覧ウィンドウが開く仕様にしました。
         </p>
+
         <p>
-          これにより、
+          これにより、ページ遷移なしで読み進められ、音楽も止まらず、
+          ブログというより“文集を開く体験”に近づけることができました。
         </p>
-        <ul>
-          <li>ページ遷移なしで読める</li>
-          <li>音楽が止まらない</li>
-          <li>没入感が続く</li>
-          <li>スマホでも快適</li>
-        </ul>
-        <h3>デザインで意識したこと</h3>
-        <p>
-          夜の静けさ、桜、金の上品さ。
-          そして女性らしい柔らかさ。
-        </p>
-        <p>
-          ただ派手にするのではなく、
-          静かな高級感が出るよう調整しました。
-        </p>
-        <h3>この仕組みは何に使えるか</h3>
-        <ul>
-          <li>ポートフォリオサイト</li>
-          <li>エッセイ・小説公開</li>
-          <li>店舗紹介ページ</li>
-          <li>ブランドサイト</li>
-          <li>作品集</li>
-        </ul>
-        <p>
-          ただ読むだけのページではなく、
-          “体験として記憶に残るサイト”にできます。
-        </p>
+
         <h3>まとめ</h3>
         <p>
           技術は派手さより、目的に合っているかが大切です。
-          軽く、速く、美しく。
-          静的サイトでもここまでできます。
+          軽く、速く、美しく。静的サイトでもここまでできます。
         </p>
       </div>
     </div>
-  </div>
+  </section>
 
+  <!-- Modal 2 -->
+  <section class="modal" id="post2" aria-hidden="true" role="dialog" aria-labelledby="post2-title">
+    <div class="modal__backdrop" data-close="true"></div>
+    <div class="modal__window" role="document">
+      <button class="modal__close" type="button" aria-label="閉じる">×</button>
 
-  
-  <div class="modal" id="post1" aria-hidden="true" role="dialog" aria-labelledby="post1-title">
-    <div class="modal-backdrop" data-close="true"></div>
-    <div class="modal-window" role="document">
-      <button class="modal-close" type="button" aria-label="閉じる">×</button>
-      <div class="modal-meta">
-        <time datetime="2026-04-23">2026.04.23</time>
-        <span class="post-tag">Web制作</span>
+      <div class="modal__meta">
+        <time datetime="2026-04-24">2026.04.24</time>
+        <span class="tag">GitHub Pages</span>
       </div>
-      <h2 id="post4-title">
-        更新したのに反映されない。GitHub Pagesで学んだ“待つ技術”
-      </h2>
 
-      <p>
-        ブログを育て始めて最初にぶつかった壁は、デザインでも文章でもなく、
-        「更新したのにサイトに反映されない」という現象だった。
-      </p>
-      <p>
-        index.html を書き換え、丁寧にコミットし、公開サイトを見る。
-        それでも画面は前のまま。最初はキャッシュか、HTMLのミスか、
-        何か壊してしまったのかと思った。
-      </p>
-      <p>
-        しかし GitHub Actions のログを見ると、原因はもっと単純だった。
-        Pages build and deployment が進行中で、次の公開依頼が順番待ちになっていた。
-      </p>
-      <p>
-        つまり、サイトが壊れたわけではなく、
-        GitHub側で「今ひとつ前の更新を公開している最中」だっただけだ。
-      </p>
-      <p>
-        Web制作では、作る技術と同じくらい、
-        仕組みを理解して落ち着いて待つ姿勢も大切だと実感した。
-      </p>
-      <p>
-        今回学んだことは三つある。
-      </p>
-      <p>
-        ・コミットを連打しない<br>
-        ・Actionsログを見る癖をつける<br>
-        ・反映には少し時間がかかることを知る
-      </p>
-      <p>
-        見た目が静かなサイトでも、裏では多くの処理が動いている。
-        表面だけで判断せず、仕組みまで理解して整える人でありたい。
-      </p>
+      <h2 id="post2-title" class="modal__title">更新したのに反映されない。GitHub Pagesで学んだ“待つ技術”</h2>
+
+      <div class="modal__content">
+        <p>
+          ブログの文章を書き換えてコミットしたのに、公開サイトには古い内容が残ったまま。
+          最初はキャッシュか、HTMLのミスか、何か壊してしまったのかと思いました。
+        </p>
+
+        <p>
+          しかし GitHub Actions のログを見ると、原因はもっと単純でした。
+          Pages build and deployment が進行中で、次の公開依頼が順番待ちになっていたのです。
+        </p>
+
+        <p>
+          つまり、サイトが壊れたわけではなく、
+          GitHub側で「今ひとつ前の更新を公開している最中」だっただけでした。
+        </p>
+
+        <h3>今回学んだこと</h3>
+        <ul>
+          <li>コミットを連打しない</li>
+          <li>Actionsログを見る癖をつける</li>
+          <li>反映には少し時間がかかると知る</li>
+        </ul>
+
+        <p>
+          見た目が静かなサイトでも、裏では多くの処理が動いています。
+          表面だけで判断せず、仕組みまで理解して整える人でありたいと思いました。
+        </p>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
 
-  <div class="modal" id="post3" aria-hidden="true" role="dialog" aria-labelledby="post3-title">
-    <div class="modal-backdrop" data-close="true"></div>
-    <div class="modal-window" role="document">
-      <button class="modal-close" type="button" aria-label="閉じる">×</button>
-      <div class="modal-meta">
+  <!-- Modal 3 -->
+  <section class="modal" id="post3" aria-hidden="true" role="dialog" aria-labelledby="post3-title">
+    <div class="modal__backdrop" data-close="true"></div>
+    <div class="modal__window" role="document">
+      <button class="modal__close" type="button" aria-label="閉じる">×</button>
+
+      <div class="modal__meta">
         <time datetime="2026-04-25">2026.04.25</time>
-        <span class="post-tag">インフラ</span>
+        <span class="tag">インフラ</span>
       </div>
-      <h2 id="post3-title">運用現場で“見やすさ”が技術と同じくらい重要な理由</h2>
-      <div class="modal-content">
-        <p>インフラや運用の現場では、「設定が正しいか」だけが評価基準ではない。誰が見ても把握しやすいこと、次の人が引き継ぎやすいことも、同じくらい重要だ。</p>
+
+      <h2 id="post3-title" class="modal__title">運用現場で“見やすさ”が技術と同じくらい重要な理由</h2>
+
+      <div class="modal__content">
+        <p>
+          インフラや運用の現場では、「設定が正しいか」だけが評価基準ではありません。
+          誰が見ても把握しやすいこと、次の人が引き継ぎやすいことも、同じくらい重要です。
+        </p>
+
         <h3>正しいだけでは足りない</h3>
-        <p>仕様通りに動く構成であっても、読みづらい設計書や分かりにくい命名は、後の保守や障害対応を難しくする。</p>
+        <p>
+          仕様通りに動く構成であっても、読みづらい設計書や分かりにくい命名は、
+          後の保守や障害対応を難しくします。
+        </p>
+
         <h3>見やすさは事故を減らす</h3>
-        <p>運用現場では、焦っている時ほど見やすい情報が必要になる。画面、表、ログ、ドキュメントの整え方は、そのまま事故率にも影響する。</p>
-        <h3>まとめ</h3>
-        <p>技術力とは、ただ動かす力だけではなく、継続して扱いやすく整える力でもある。運用における“見やすさ”は、立派な技術だと思っている。</p>
+        <p>
+          運用現場では、焦っている時ほど見やすい情報が必要になります。
+          画面、表、ログ、ドキュメントの整え方は、そのまま事故率にも影響します。
+        </p>
+
+        <p>
+          技術力とは、ただ動かす力だけではなく、
+          継続して扱いやすく整える力でもある。そう考えています。
+        </p>
       </div>
     </div>
-  </div>
+  </section>
 
   <footer class="site-footer">
     <div class="container footer-inner">
@@ -268,8 +214,7 @@
       <a href="/">Topへ戻る</a>
     </div>
   </footer>
-  
 
-  <script src="/blog/assets/js/script.js" defer></script>
+  <script src="/blog/assets/js/script.js?v=1" defer></script>
 </body>
 </html>
